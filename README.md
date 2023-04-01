@@ -3,6 +3,20 @@
 <small> Desafio referente ao módulo: Criando APIs RESTfull com Node.js - Rocketseat </small>
 <p>Nesse desafio será desenvolvido uma API para controle de dieta diária, a Daily Diet API.</p>
 
+<ul>  
+  <li> - [ ]  Deve ser possível criar um usuário</li>
+  <li> - [ ]  Deve ser possível identificar o usuário entre as requisições</li>
+  <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
+      <ul>
+          <li>Nome</li>
+          <li>Descrição</li>
+          <li>Data e Hora</li>
+          <li>Está dentro ou não da dieta</li>
+      </ul>
+  
+  </li>
+</ul>
+
 
 <ul>
    <li> - [ ]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima </li>
