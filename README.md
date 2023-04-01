@@ -1,24 +1,38 @@
-<<<<<<< HEAD
-[ ]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima
-[ ]  Deve ser possível apagar uma refeição
-[ ]  Deve ser possível listar todas as refeições de um usuário
-[ ]  Deve ser possível visualizar uma única refeição
-[ ]  Deve ser possível recuperar as métricas de um usuário{
-        [ ] Quantidade total de refeições registradas
-        [ ] Quantidade total de refeições dentro da dieta
-        [ ] Melhor sequência por dia de refeições dentro da dieta
-}
 
-[ ]  O usuário só pode visualizar, editar e apagar as refeições o qual ele criou
-=======
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [] Neptune
-- [] Comet Haley
-- [] asdasd
->>>>>>> ac58b39f60e74798d42d7c5019be3ca3cacc32c2
+<h1> Desafio 02 </h1>
+<small> Desafio referente ao módulo: Criando APIs RESTfull com Node.js - Rocketseat </small>
+<p>Nesse desafio será desenvolvido uma API para controle de dieta diária, a Daily Diet API.</p>
+
+
+<ul>
+   <li> - [ ]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima </li>
+   <li> - [ ]  Deve ser possível apagar uma refeição </li>
+   <li> - [ ]  Deve ser possível listar todas as refeições de um usuário</li>
+   <li> - [ ]  Deve ser possível visualizar uma única refeição </li>
+   <li> - [ ]  Deve ser possível recuperar as métricas de um usuário
+          <ul>
+            <li> - [ ] Quantidade total de refeições registradas </li>
+            <li> - [ ] Quantidade total de refeições dentro da dieta </li>
+            <li> - [ ] Quantidade total de refeições fora da dieta </li>
+            <li> - [ ] Melhor sequência por dia de refeições dentro da dieta </li>
+          </ul>
+       
+  </li>
+   <li> - [ ]  O usuário só pode visualizar, editar e apagar as refeições o qual ele criou </li>
+ </ul>
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+ 
+  
+
