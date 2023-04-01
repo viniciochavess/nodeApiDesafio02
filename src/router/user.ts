@@ -1,5 +1,6 @@
 import {FastifyInstance} from 'fastify'
 import crypto from 'node:crypto'
+import z from 'zod'
 import { knex } from '../database'
 
 export async function userRouter(app:FastifyInstance){
@@ -9,11 +10,23 @@ export async function userRouter(app:FastifyInstance){
       return table
     })
 
-    app.post('/create',(request,reply)=>{
-        const {name} = request.body
+    app.post('/create',async(request,reply)=>{
+        const createUserBodySchema = z.object({
+          name: z.string()
+
+        })
+
+        const {name} = createUserBodySchema.parse(request.body)
         const id = crypto.randomUUID()
-        console.log(id)
-        return name
+
+        await knex('user').insert({
+          id,
+          name
+
+        })
+       
+        
+        return reply.status(201).send('user create')
     })
 
 }
