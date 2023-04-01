@@ -7,11 +7,13 @@ export async function up(knex: Knex): Promise<void> {
         table.text('name').notNullable,
         table.text('description').notNullable,
         table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable,
-        table.boolean('diet').defaultTo(true)
+        table.boolean('diet').defaultTo(true),
+        table.uuid('user_id').references('id').inTable('user')
     })
 }
 
 
 export async function down(knex: Knex): Promise<void> {
+    await knex.schema.dropTable('snack')
 }
 
