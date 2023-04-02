@@ -20,9 +20,9 @@
           <li>Está dentro ou não da dieta</li>
   </ul>
 
-      POST: http://localhost:3333/snack/create JSON {name:"var",description: "var",diet:"bool"}
-       middleware está responsavel por verificar se usuário está logado cookie: sessionId  
-  
+        POST: http://localhost:3333/snack/create JSON {name:"var",description: "var",diet:"bool"}
+        middleware está responsavel por verificar se usuário está logado cookie: sessionId  
+    
   </li>
   
 </ul>
@@ -34,11 +34,14 @@
    <li> - [x]  Deve ser possível apagar uma refeição </li>
          DELETE:http://localhost:3333/snack/delete/:idparams podendo deletar apenas o usuário que criou
    <li> - [x]  Deve ser possível listar todas as refeições de um usuário</li>
-          apenas o usuário que criou pode acessar
-         GET:http://localhost:3333/snack/list: busca todas as refeições
+   
+           apenas o usuário que criou pode acessar
+           GET:http://localhost:3333/snack/list: busca todas as refeições
          
    <li> - [x]  Deve ser possível visualizar uma única refeição </li>
+   
          GET:http://localhost:3333/snack/list/ID busca a refeição especifica
+         
    <li> - [ ]  Deve ser possível recuperar as métricas de um usuário
           <ul>
             <li> - [ ] Quantidade total de refeições registradas </li>
