@@ -12,7 +12,7 @@
          <span> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  <span>
   <li> - [x]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
   
-  
+  .
       <ul>
           <li>Nome</li>
           <li>Descrição</li>
