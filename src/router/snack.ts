@@ -38,6 +38,7 @@ export async function snackRouter(app:FastifyInstance){
     })
 
     app.patch('/update/:idSnack',{preHandler:verifySession},async(request,reply)=>{
+        const sessionId = request.cookies.sessionId
 
         const requestParamsSchema = z.object({
             idSnack:string()
@@ -56,8 +57,11 @@ export async function snackRouter(app:FastifyInstance){
        
        
        const snackOne = await knex('snack').where({
-        id:idSnack
+        id:idSnack,
+        user_id:sessionId
        }).first()
+
+       console.log(snackOne)
 
        if(snackOne){
             await knex('snack').update({
@@ -67,8 +71,11 @@ export async function snackRouter(app:FastifyInstance){
                
 
             }).where({
-                id:idSnack
+                id:idSnack,
+                user_id:sessionId
             })
+       }else{
+        reply.status(401).send('not found')
        }
        
     })
