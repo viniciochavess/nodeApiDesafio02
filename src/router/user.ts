@@ -3,6 +3,7 @@ import crypto from 'node:crypto'
 import z from 'zod'
 import { knex } from '../database'
 import { verifyUserExist } from '../middlewares/verify-user-exist'
+import { createSessionIdUser } from '../middlewares/create-session-id-user'
 
 export async function userRouter(app:FastifyInstance){
 
@@ -12,6 +13,7 @@ export async function userRouter(app:FastifyInstance){
     })
 
     app.post('/create',{preHandler:verifyUserExist},async(request,reply)=>{
+   
         const createUserBodySchema = z.object({
           name: z.string()
 
@@ -28,6 +30,16 @@ export async function userRouter(app:FastifyInstance){
        
         
         return reply.status(201).send('user create')
+    })
+
+    app.post('/login',{preHandler:createSessionIdUser},(request,reply)=>{
+
+      let sessionId = request.cookies.sessionId
+      console.log(sessionId)
+
+      return reply.status(201).send('create session')
+
+      
     })
 
 }
