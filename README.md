@@ -8,7 +8,7 @@
         <p> POST: http://localhost:3333/user/create JSON {name:"var"}<p>
   <li> - [x]  Deve ser possível identificar o usuário entre as requisições</li>
          <p> POST: http://localhost:3333/user/login JSON {name:"var"}<p>
-         <p> middleware está responsavel pela criação "create-session-id-user" cookie:'sessionId' <p>
+         <span> middleware está responsavel pela criação "create-session-id-user" cookie:'sessionId' <span>
   <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
       <ul>
           <li>Nome</li>
