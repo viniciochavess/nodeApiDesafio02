@@ -29,6 +29,30 @@ export async function snackRouter(app:FastifyInstance){
         
     })
 
+    app.get('/dashboard',{preHandler:verifySession},async(request,reply)=>{
+        const sessionId = request.cookies.sessionId
+
+        const result = await knex('snack').where({
+            user_id:sessionId
+        })
+        const snackTotal = result.length
+        const snackDietTrue = result.filter((diet)=>{
+            return diet.diet == 1
+            
+        })
+        const snackDietFalse = result.filter((diet)=>{
+            return diet.diet == 0
+            
+        })
+
+        return {
+                'snackTotal':snackTotal,
+                "snackDietTrue":snackDietTrue.length,
+                "snackDietFalse":snackDietFalse.length,
+                result
+        }
+
+    })
     app.post('/create', {preHandler:verifySession} ,async(request,reply)=>{
 
         const createSnackSchema = z.object({
