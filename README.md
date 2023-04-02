@@ -48,7 +48,7 @@
           </ul>
        
   </li>
-   <li> - [ ]  O usuário só pode visualizar, editar e apagar as refeições o qual ele criou </li>
+   <li> - [x]  O usuário só pode visualizar, editar e apagar as refeições o qual ele criou </li>
  </ul>
 
 
