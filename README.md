@@ -5,7 +5,7 @@
 
 <ul>  
   <li> - [x]  Deve ser possível criar um usuário</li>
-  <li> - [ ]  Deve ser possível identificar o usuário entre as requisições</li>
+  <li> - [x]  Deve ser possível identificar o usuário entre as requisições</li>
   <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
       <ul>
           <li>Nome</li>
