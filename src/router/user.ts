@@ -2,6 +2,7 @@ import {FastifyInstance} from 'fastify'
 import crypto from 'node:crypto'
 import z from 'zod'
 import { knex } from '../database'
+import { verifyUserExist } from '../middlewares/verify-user-exist'
 
 export async function userRouter(app:FastifyInstance){
 
@@ -10,7 +11,7 @@ export async function userRouter(app:FastifyInstance){
       return table
     })
 
-    app.post('/create',async(request,reply)=>{
+    app.post('/create',{preHandler:verifyUserExist},async(request,reply)=>{
         const createUserBodySchema = z.object({
           name: z.string()
 
