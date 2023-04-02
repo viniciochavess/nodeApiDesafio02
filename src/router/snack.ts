@@ -80,4 +80,23 @@ export async function snackRouter(app:FastifyInstance){
        
     })
 
+    app.delete('/delete/:idSnack',{preHandler:verifySession},async(request,reply)=>{
+        const sessionId = request.cookies.sessionId
+        const requestParamsSchema = z.object({
+            idSnack:string()
+        });
+        const {idSnack} = requestParamsSchema.parse(request.params)
+       const result =  await knex('snack').delete().where({
+            id:idSnack,
+            user_id:sessionId
+        })
+
+        if(result){
+            reply.status(201).send('deletado com sucesso!!!')
+        }else{
+            reply.status(401)
+        }
+
+    })
+
 }
