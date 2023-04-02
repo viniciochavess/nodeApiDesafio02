@@ -36,8 +36,9 @@
    <li> - [x]  Deve ser possível listar todas as refeições de um usuário</li>
           apenas o usuário que criou pode acessar
          GET:http://localhost:3333/snack/list: busca todas as refeições
+         
+   <li> - [x]  Deve ser possível visualizar uma única refeição </li>
          GET:http://localhost:3333/snack/list/ID busca a refeição especifica
-   <li> - [ ]  Deve ser possível visualizar uma única refeição </li>
    <li> - [ ]  Deve ser possível recuperar as métricas de um usuário
           <ul>
             <li> - [ ] Quantidade total de refeições registradas </li>
