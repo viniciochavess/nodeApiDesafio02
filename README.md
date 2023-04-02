@@ -30,10 +30,13 @@
 
 <ul>
    <li> - [x]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima </li>
-          http://localhost:3333/snack/update/:idparams podendo alterar os campos body{name, description , diet}
+          PUTCH:http://localhost:3333/snack/update/:idparams podendo alterar os campos body{name, description , diet}
    <li> - [x]  Deve ser possível apagar uma refeição </li>
-          http://localhost:3333/snack/delete/:idparams podendo deletar apenas o usuário que criou
-   <li> - [ ]  Deve ser possível listar todas as refeições de um usuário</li>
+         DELETE:http://localhost:3333/snack/delete/:idparams podendo deletar apenas o usuário que criou
+   <li> - [x]  Deve ser possível listar todas as refeições de um usuário</li>
+          apenas o usuário que criou pode acessar
+         GET:http://localhost:3333/snack/list: busca todas as refeições
+         GET:http://localhost:3333/snack/list/ID busca a refeição especifica
    <li> - [ ]  Deve ser possível visualizar uma única refeição </li>
    <li> - [ ]  Deve ser possível recuperar as métricas de um usuário
           <ul>

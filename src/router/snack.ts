@@ -7,7 +7,25 @@ import crypto from 'node:crypto'
 
 export async function snackRouter(app:FastifyInstance){
 
-    app.get('/',(request,reply)=>{
+    app.get('/list/:idSnack?',{preHandler:verifySession},async(request,reply)=>{
+        const sessionId = request.cookies.sessionId
+        const {idSnack} =  request.params
+        if(idSnack){
+           const result = await knex('snack').where({
+                id:idSnack,
+                user_id:sessionId
+            }).first()
+
+            reply.status(201).send(result)
+            
+        }else{
+           const result = await knex('snack').where({
+                user_id:sessionId
+            })
+            return result
+        }
+     
+
         
     })
 
