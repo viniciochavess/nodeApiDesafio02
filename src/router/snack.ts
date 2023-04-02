@@ -2,7 +2,7 @@ import {FastifyInstance} from 'fastify'
 import {knex} from '../database'
 import {createSessionIdUser} from '../middlewares/create-session-id-user'
 import {verifySession} from '../middlewares/verify-session'
-import { z } from 'zod'
+import { boolean, string, z } from 'zod'
 import crypto from 'node:crypto'
 
 export async function snackRouter(app:FastifyInstance){
@@ -35,6 +35,42 @@ export async function snackRouter(app:FastifyInstance){
             user_id:sessionId
          })
         reply.status(201).send('snack create')
+    })
+
+    app.patch('/update/:idSnack',{preHandler:verifySession},async(request,reply)=>{
+
+        const requestParamsSchema = z.object({
+            idSnack:string()
+        });
+        const requestBodySchema = z.object({
+            name:string(),
+            description:string(),
+            diet:boolean()
+        })
+       
+        const {idSnack} = requestParamsSchema.parse(request.params)
+       
+
+        const {name,description,diet} = requestBodySchema.parse(request.body)
+
+       
+       
+       const snackOne = await knex('snack').where({
+        id:idSnack
+       }).first()
+
+       if(snackOne){
+            await knex('snack').update({
+                name,
+                description,
+                diet,
+               
+
+            }).where({
+                id:idSnack
+            })
+       }
+       
     })
 
 }

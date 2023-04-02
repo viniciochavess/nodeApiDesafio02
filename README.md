@@ -29,7 +29,8 @@
 
 
 <ul>
-   <li> - [ ]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima </li>
+   <li> - [x]  Deve ser possível editar uma refeição, podendo alterar todos os dados acima </li>
+          http://localhost:3333/snack/update/:params podendo alterar os campos name, description , diet
    <li> - [ ]  Deve ser possível apagar uma refeição </li>
    <li> - [ ]  Deve ser possível listar todas as refeições de um usuário</li>
    <li> - [ ]  Deve ser possível visualizar uma única refeição </li>
