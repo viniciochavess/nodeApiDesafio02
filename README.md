@@ -4,7 +4,7 @@
 <p>Nesse desafio será desenvolvido uma API para controle de dieta diária, a Daily Diet API.</p>
 
 <ul>  
-  <li> - [ ]  Deve ser possível criar um usuário</li>
+  <li> - [x]  Deve ser possível criar um usuário</li>
   <li> - [ ]  Deve ser possível identificar o usuário entre as requisições</li>
   <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
       <ul>
