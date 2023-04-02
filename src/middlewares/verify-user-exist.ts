@@ -1,6 +1,7 @@
 import{FastifyRequest, FastifyReply} from 'fastify'
 import { knex } from '../database'
 import {z} from 'zod'
+
 export async function verifyUserExist(request:FastifyRequest,reply:FastifyReply){
 
     const verifyCreateUser = z.object({

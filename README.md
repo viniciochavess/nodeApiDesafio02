@@ -7,15 +7,15 @@
   <li> - [x]  Deve ser possível criar um usuário</li>
         <p> POST: http://localhost:3333/user/create JSON {name:"var"}<p>
   <li> - [x]  Deve ser possível identificar o usuário entre as requisições</li>
-<<<<<<< HEAD
+
          <p> POST: http://localhost:3333/user/login JSON {name:"var"}<p>
-         <span> middleware está responsavel pela criação "create-session-id-user" cookie:'sessionId' <span>
+         <span> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  <span>
   <li> - [x]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
-=======
+
          <span> POST: http://localhost:3333/user/login JSON {name:"var"}</span>
-         <p> middleware está responsavel pela criação "create-session-id-user" cookie:'sessionId' </p>
+         <p> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  </p>
   <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
->>>>>>> 7b1b9b629872dea3e5249df6b7aabfae8bf39889
+
       <ul>
           <li>Nome</li>
           <li>Descrição</li>
