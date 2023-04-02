@@ -12,8 +12,8 @@
          <span> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  <span>
   <li> - [x]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
 
-         <span> POST: http://localhost:3333/user/login JSON {name:"var"}</span>
-         <p> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  </p>
+         <span> POST: http://localhost:3333/snack/create JSON {name:"var",description: "var",diet:"bool"}</span>
+         <p> middleware está responsavel por verificar se usuário está logado cookie: sessionId  </p>
   <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
 
       <ul>
