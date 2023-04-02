@@ -11,17 +11,17 @@
          <p> POST: http://localhost:3333/user/login JSON {name:"var"}<p>
          <span> middleware está responsavel pela criação "create-session-id-user" cookie: sessionId  <span>
   <li> - [x]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
-
-         <span> POST: http://localhost:3333/snack/create JSON {name:"var",description: "var",diet:"bool"}</span>
-         <p> middleware está responsavel por verificar se usuário está logado cookie: sessionId  </p>
-  <li> - [ ]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
-
+  
+  
       <ul>
           <li>Nome</li>
           <li>Descrição</li>
           <li>Data e Hora</li>
           <li>Está dentro ou não da dieta</li>
       </ul>
+
+      <span> POST: http://localhost:3333/snack/create JSON {name:"var",description: "var",diet:"bool"}</span>
+      <p> middleware está responsavel por verificar se usuário está logado cookie: sessionId  </p>
   
   </li>
    <p> POST: http://localhost:3333/snack/create JSON {name:"var",description:"var","diet":"bool"}<p>
