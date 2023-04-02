@@ -24,7 +24,7 @@
        middleware está responsavel por verificar se usuário está logado cookie: sessionId  
   
   </li>
-   <p> POST: http://localhost:3333/snack/create JSON {name:"var",description:"var","diet":"bool"}<p>
+  
 </ul>
 
 
