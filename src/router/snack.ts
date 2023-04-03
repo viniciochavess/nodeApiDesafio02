@@ -47,12 +47,12 @@ export async function snackRouter(app:FastifyInstance){
        
     
         function getDays(){
-            let days = []
+            let days:number[] = []
             let contagem = 0;
             let contagemLoop = 0;
             snackDietTrue.forEach((snack)=>{
                 
-                let day =  (new Date(snack.created_at).getDate())
+                let day:number =  (new Date(snack.created_at).getDate())
                 days.push(day)
             })
             for(let i = 0; i < days.length; i++){
