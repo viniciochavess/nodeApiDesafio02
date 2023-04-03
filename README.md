@@ -1,5 +1,15 @@
 
 <h1> Desafio 02 </h1>
+
+<h5> Tech </h5>
+
+      {
+        node/fastify,
+        knex,
+        zod,
+        Sqlite
+      }
+
 <small> Desafio referente ao módulo: Criando APIs RESTfull com Node.js - Rocketseat </small>
 <p>Nesse desafio será desenvolvido uma API para controle de dieta diária, a Daily Diet API.</p>
 
