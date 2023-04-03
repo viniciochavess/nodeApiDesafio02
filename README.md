@@ -15,11 +15,14 @@
 
 <ul>  
   <li> - [x]  Deve ser possível criar um usuário</li>
+
          POST: http://localhost:3333/user/create JSON {name:"var"}
+
   <li> - [x]  Deve ser possível identificar o usuário entre as requisições</li>
 
           POST: http://localhost:3333/user/login JSON {name:"var"}
           middleware está responsavel pela criação "create-session-id-user" cookie: sessionId 
+          
   <li> - [x]  Deve ser possível registrar uma refeição feita, com as seguintes informações:
   
   
@@ -46,7 +49,7 @@
    <li> - [x]  Deve ser possível apagar uma refeição </li>
 
          DELETE:http://localhost:3333/snack/delete/:idparams podendo deletar apenas o usuário que criou
-         
+
    <li> - [x]  Deve ser possível listar todas as refeições de um usuário</li>
    
            apenas o usuário que criou pode acessar
