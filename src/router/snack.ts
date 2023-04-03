@@ -77,7 +77,7 @@ export async function snackRouter(app:FastifyInstance){
                 "snackTotal":snackTotal,
                 "snackDietTrue":snackDietTrue.length,
                 "snackDietFalse":snackDietFalse.length,
-                result
+               
         }
 
     })
