@@ -42,12 +42,12 @@
    
          GET:http://localhost:3333/snack/list/ID busca a refeição especifica
          
-   <li> - [ ]  Deve ser possível recuperar as métricas de um usuário
+   <li> - [x]  Deve ser possível recuperar as métricas de um usuário
           <ul>
             <li> - [x] Quantidade total de refeições registradas </li>
             <li> - [x] Quantidade total de refeições dentro da dieta </li>
             <li> - [x] Quantidade total de refeições fora da dieta </li>
-            <li> - [ ] Melhor sequência por dia de refeições dentro da dieta </li>
+            <li> - [x] Melhor sequência por dia de refeições dentro da dieta </li>
           </ul>
        
   </li>

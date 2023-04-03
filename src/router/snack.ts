@@ -44,9 +44,37 @@ export async function snackRouter(app:FastifyInstance){
             return diet.diet == 0
             
         })
+       
+    
+        function getDays(){
+            let days = []
+            let contagem = 0;
+            let contagemLoop = 0;
+            snackDietTrue.forEach((snack)=>{
+                
+                let day =  (new Date(snack.created_at).getDate())
+                days.push(day)
+            })
+            for(let i = 0; i < days.length; i++){
+                    if(days[i]+1 == days[i+1]){
+                        if(contagemLoop >= contagem  ){
+                            contagem++
+                        }
+                        contagemLoop++
+                      
+                    }else{
+                        contagemLoop = 0
+                        
+                    }
+            }
+           
+            return ++contagem
+        }
+        
 
         return {
-                'snackTotal':snackTotal,
+                "sequence":getDays(),
+                "snackTotal":snackTotal,
                 "snackDietTrue":snackDietTrue.length,
                 "snackDietFalse":snackDietFalse.length,
                 result
