@@ -50,6 +50,12 @@
             <li> - [x] Melhor sequência por dia de refeições dentro da dieta </li>
           </ul>
        
+          return {
+              "sequence": 12 exemple,
+              "snackTotal": 79 exemple,
+              "snackDietTrue": 76 exemple,
+              "snackDietFalse": 3 exemple
+            }
   </li>
    <li> - [x]  O usuário só pode visualizar, editar e apagar as refeições o qual ele criou </li>
  </ul>
